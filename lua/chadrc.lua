@@ -7,10 +7,14 @@ local M = {}
 M.ui = {
 	theme = "radium",
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+    statusline = {
+        theme = "vscode_colored",
+    },
+
+    -- hl_override = {
+    -- 	Comment = { italic = true },
+    -- 	["@comment"] = { italic = true },
+    -- },
 }
 
 return M
