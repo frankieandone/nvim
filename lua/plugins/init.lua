@@ -1,13 +1,12 @@
 return {
     {
         "stevearc/conform.nvim",
-        event = "BufWritePre", -- uncomment for format on save
+        event = "BufWritePre",
         config = function()
             require "configs.conform"
         end,
     },
 
-    -- These are some examples, uncomment them if you want to see them work!
     {
         "neovim/nvim-lspconfig",
         config = function()
@@ -57,11 +56,20 @@ return {
                 "kotlin",
             },
         },
+    },
+    --
+    {
         "phaazon/hop.nvim",
         as = "hop",
         config = function()
-            -- you can configure Hop the way you like here; see :h hop-config
-            require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
+            require("hop").setup { keys = "asdfhjkl;" }
         end,
     },
+    --
+    {
+        "folke/persistence.nvim",
+        event = "BufReadPre",
+        opts = {},
+    },
+    --
 }
