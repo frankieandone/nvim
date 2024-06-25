@@ -1,7 +1,5 @@
 require "nvchad.mappings"
 
--- add yours here
-
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
@@ -16,3 +14,7 @@ map("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], {})
 map("n", "<leader>ql", [[<cmd>lua require("persistence").load({ last = true })<cr>]], {})
 -- stop Persistence => session won't be saved on exit
 map("n", "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]], {})
+
+map("n", "<leader>ca", [[<cmd>lua vim.lsp.buf.code_action()<CR>]])
+
+print "Keymaps have been set."
